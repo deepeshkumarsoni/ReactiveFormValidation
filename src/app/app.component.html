@@ -1,0 +1,119 @@
+<h4 class="head"><b> Reactive-Form </b></h4>
+
+<form class="container" [formGroup]="userForm">
+
+  <div class="form-group">
+    <label for="first"> First Name :</label>
+    <input
+      type="text"
+      required
+      class="form-control"
+      formControlName="firstName"
+      id="first"
+      placeholder="Enter First Name"
+    />
+    <span *ngIf="userForm.touched">
+      <i
+        class="fa fa-check-circle"
+        style="color: green"
+        *ngIf="userForm.controls.firstName.valid"
+      ></i>
+      <i
+        class="fa fa-times-circle"
+        style="color: red"
+        *ngIf="userForm.controls.firstName.invalid"
+      ></i>
+      First Name should be of minimum 4 characters.
+    </span>
+  </div>
+
+  <div class="form-group">
+    <label for="last"> Last Name : </label>
+    <input
+      type="last"
+      required
+      class="form-control"
+      id="last"
+      formControlName="lastName"
+      placeholder="Enter Last Name"
+    />
+    <span *ngIf="userForm.controls.lastName.touched">
+      <i
+        class="fa fa-times-circle"
+        style="color: red"
+        *ngIf="userForm.controls.lastName.invalid"
+      ></i>
+      <i
+        class="fa fa-check-circle"
+        style="color: green"
+        *ngIf="userForm.controls.lastName.valid"
+      ></i>
+      Last Name should be of minimum 3 characters.
+    </span>
+  </div>
+
+  <div class="form-group">
+    <label for="email"> Email : </label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      formControlName="email"
+      placeholder="Enter Email"
+    />
+    <span *ngIf="userForm.controls.email.touched">
+      <i
+        class="fa fa-times-circle"
+        style="color: red"
+        *ngIf="userForm.controls.email.invalid"
+      ></i>
+      <i
+        class="fa fa-check-circle"
+        style="color: green"
+        *ngIf="userForm.controls.email.valid"
+      ></i>
+      Email Validation.
+    </span>
+  </div>
+  
+  <div class="form-group">
+    <label for="password"> Password : </label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      formControlName="password"
+      placeholder="Enter Password"
+    />
+    <span *ngIf="userForm.controls.password.touched">
+      <i
+        class="fa fa-times-circle"
+        style="color: red"
+        *ngIf="userForm.controls.password.invalid"
+      ></i>
+      <i
+        class="fa fa-check-circle"
+        style="color: green"
+        *ngIf="userForm.controls.password.valid"
+      ></i>
+      Password should be of minimum 4 characters.
+    </span>
+  </div>
+  <br />
+
+  <button
+    type="submit"
+    style="margin-left: 13cm"
+    class="btn btn-primary"
+    (click)="onSubmit()"
+  >
+    Submit</button
+  ><br /><br />
+  
+</form>
+
+<!-- <pre>
+  Value  : {{ userForm.value | json }}
+  Status : {{ userForm.status | json }}
+  Touched: {{ userForm.touched | json }}
+</pre>  -->
