@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +10,12 @@ export class AppComponent implements OnInit {
   title = 'reactive-form';
   userForm: FormGroup;
 
-  // constructor(private fb : FormBuilder){
-  //   this.form = this.fb.group({
+  // constructor(public fb : FormBuilder){
+  //   this.userForm = this.fb.group({
   //     firstName : ['',Validators.minLength(4),],
   //     lastName : ['',Validators.minLength(3),],
-  //     email :['',Validators.required,Validators.email,],
-  //     password : ['',Validators.required,Validators.minLength(4),],
+  //     email : ['',Validators.required,Validators.email,],
+  //     password :['',Validators.required,Validators.minLength(4),],
   //   });
   // }
 

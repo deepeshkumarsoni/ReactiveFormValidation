@@ -1,0 +1,32 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "first": "Deepesh",
+      "last": "Soni",
+      "email": "deepesh@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "first": "Rupesh",
+      "last": "Soni",
+      "email": "roop@gmail.com",
+      "password": "5678"
+    },
+    {
+      "id": "3",
+      "first": "Ram",
+      "last": "Soni",
+      "email": "ram@gmail.com",
+      "password": "3456"
+    },
+    {
+      "id": "4",
+      "first": "Shyam",
+      "last": "Soni",
+      "email": "ram@gmail.com",
+      "password": "3456"
+    }
+  ]
+}
