@@ -2,29 +2,29 @@
   "user": [
     {
       "id": "1",
-      "first": "Deepesh",
-      "last": "Soni",
+      "firstName": "Deepesh",
+      "lastName": "Soni",
       "email": "deepesh@gmail.com",
       "password": "1234"
     },
     {
       "id": "2",
-      "first": "Rupesh",
-      "last": "Soni",
+      "firstName": "Rupesh",
+      "lastName": "Soni",
       "email": "roop@gmail.com",
       "password": "5678"
     },
     {
       "id": "3",
-      "first": "Ram",
-      "last": "Soni",
+      "firstName": "Ram",
+      "lastName": "Tiwari",
       "email": "ram@gmail.com",
       "password": "3456"
     },
     {
       "id": "4",
-      "first": "Shyam",
-      "last": "Soni",
+      "firstName": "Shyam",
+      "lastName": "Soni",
       "email": "ram@gmail.com",
       "password": "3456"
     }

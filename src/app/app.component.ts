@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit {
   //   });
   // }
 
-  constructor() {
+  constructor(private httpClient:HttpClient) {
     this.userForm = new FormGroup({
       firstName: new FormControl('', [
         Validators.required,
@@ -39,7 +40,15 @@ export class AppComponent implements OnInit {
       ]),
     });
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this
+    .httpClient
+    .get('http://localhost:3000/user/1')
+    .subscribe((user)=>{
+      console.log(user);
+      this.userForm.patchValue(user);
+    });
+  }
 
   get formControl() {
     return this.userForm.controls;
