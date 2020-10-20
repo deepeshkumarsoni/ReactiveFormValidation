@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this
     .httpClient
-    .get('http://localhost:3000/user/1')
+    .get('http://localhost:3000/user/4')
     .subscribe((user)=>{
       console.log(user);
       this.userForm.patchValue(user);
